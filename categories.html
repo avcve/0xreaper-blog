@@ -1,0 +1,17 @@
+---
+layout: default
+title: Categories
+permalink: /categories.html
+---
+<div class="post-content">
+{% for tag in site.tags %}
+  <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+  <ul style="list-style:none; margin:0 0 1.5rem 0;">
+    {% for post in tag[1] %}
+    <li style="padding:0.5rem 0; border-bottom:1px solid var(--line);">
+      <a href="{{ post.url | relative_url }}" style="color:var(--bone);">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+</div>

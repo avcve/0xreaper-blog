@@ -1,0 +1,17 @@
+---
+layout: default
+title: Tags
+permalink: /tags.html
+---
+<div class="post-content">
+{% for tag in site.tags %}
+  <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }} <span class="mono" style="color:var(--muted); font-size:0.8rem;">({{ tag[1] | size }})</span></h3>
+  <ul style="list-style:none; margin:0 0 1.5rem 0;">
+    {% for post in tag[1] %}
+    <li style="padding:0.4rem 0;">
+      <a href="{{ post.url | relative_url }}" style="color:var(--bone-dim);">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+</div>

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Archives
+permalink: /archives.html
+---
+<div class="post-content">
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in posts_by_year %}
+  <h2>{{ year.name }}</h2>
+  <ul style="list-style:none; margin:0 0 1.5rem 0;">
+    {% for post in year.items %}
+    <li style="padding:0.5rem 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:1rem;">
+      <a href="{{ post.url | relative_url }}" style="color:var(--bone);">{{ post.title }}</a>
+      <span class="mono" style="color:var(--muted); font-size:0.78rem; white-space:nowrap;">{{ post.date | date: "%b %-d" }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+</div>

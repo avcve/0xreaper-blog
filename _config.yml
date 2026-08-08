@@ -1,0 +1,33 @@
+title: 0xReaper
+tagline: Offensive Security Writeups & Web3 Audits
+description: >-
+  Security research, Web3 smart contract audits, and full writeups from the field.
+  Access control, payment logic, and everything in between.
+author: 0xReaper
+
+# --- update these with your real links ---
+github_username: avcve
+x_username: Braves_shadow16
+email: ""
+
+# Project page deployment: avcve.github.io/0xreaper-blog
+baseurl: "/0xreaper-blog"
+url: "https://avcve.github.io"
+
+markdown: kramdown
+permalink: /writeups/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

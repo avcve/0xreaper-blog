@@ -1,0 +1,18 @@
+{% comment %}
+  Usage: {% include thumb.html kind=post.thumb %}
+  kind values: access-control | idor | payment | recon | default
+{% endcomment %}
+<div class="post-thumb">
+  {% case include.kind %}
+  {% when 'access-control' %}
+    <svg viewBox="0 0 150 100" preserveAspectRatio="none"><rect width="150" height="100" fill="#111113"/><path d="M40 30 L110 30 L110 74 L40 74 Z" fill="none" stroke="#8b1e2f" stroke-width="1.5"/><path d="M55 45 L95 45 M55 58 L95 58" stroke="#8b1e2f" stroke-width="1"/></svg>
+  {% when 'idor' %}
+    <svg viewBox="0 0 150 100" preserveAspectRatio="none"><rect width="150" height="100" fill="#111113"/><circle cx="55" cy="50" r="17" fill="none" stroke="#5b8494" stroke-width="1.5"/><circle cx="95" cy="50" r="17" fill="none" stroke="#c9364a" stroke-width="1.5"/></svg>
+  {% when 'payment' %}
+    <svg viewBox="0 0 150 100" preserveAspectRatio="none"><rect width="150" height="100" fill="#111113"/><rect x="35" y="35" width="80" height="30" rx="3" fill="none" stroke="#c9364a" stroke-width="1.5"/><line x1="35" y1="47" x2="115" y2="47" stroke="#c9364a" stroke-width="1.5"/></svg>
+  {% when 'recon' %}
+    <svg viewBox="0 0 150 100" preserveAspectRatio="none"><rect width="150" height="100" fill="#111113"/><circle cx="65" cy="45" r="20" fill="none" stroke="#5b8494" stroke-width="1.5"/><line x1="80" y1="60" x2="105" y2="80" stroke="#5b8494" stroke-width="1.5"/></svg>
+  {% else %}
+    <svg viewBox="0 0 150 100" preserveAspectRatio="none"><rect width="150" height="100" fill="#111113"/><path d="M20 65 L45 52 L65 68 L85 38 L110 55 L135 30" stroke="#8b1e2f" stroke-width="2" fill="none" opacity="0.75"/><circle cx="85" cy="38" r="3" fill="#c9364a"/></svg>
+  {% endcase %}
+</div>

@@ -1,0 +1,19 @@
+<aside class="right-col">
+  <div class="side-block">
+    <h4>Recently Updated</h4>
+    <ul class="recent-list">
+      {% for post in site.posts limit:5 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="side-block">
+    <h4>Trending Tags</h4>
+    <div class="tag-cloud">
+      {% for tag in site.tags %}
+      <a href="{{ '/tags.html' | relative_url }}#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</aside>
