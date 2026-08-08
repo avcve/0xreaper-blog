@@ -89,7 +89,7 @@ nav.sidebar-nav a{
 }
 nav.sidebar-nav a:hover{background:rgba(255,255,255,0.04); color:var(--bone);}
 nav.sidebar-nav a.active{
-  background:rgba(139,30,47,0.18);
+  background:rgba(109,40,217,0.18);
   color:var(--bone);
   border-left:2px solid var(--blood-bright);
 }
@@ -226,7 +226,7 @@ main.feed{
   padding:0.25rem 0.6rem; border-radius:3px; font-weight:700; letter-spacing:0.04em;
   margin-bottom:1rem;
 }
-.sev-critical{background:rgba(201,54,74,0.15); color:var(--blood-bright); border:1px solid var(--blood);}
+.sev-critical{background:rgba(168,85,247,0.15); color:var(--blood-bright); border:1px solid var(--blood);}
 .sev-high{background:rgba(200,140,50,0.15); color:#d99a3a; border:1px solid #7a5c1e;}
 .sev-medium{background:rgba(91,132,148,0.15); color:var(--steel); border:1px solid #345560;}
 
