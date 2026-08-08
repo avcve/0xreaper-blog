@@ -2,6 +2,7 @@
 title: "Cross-Event Ticket Validation Bypass: A Business Logic Flaw Scanners Can't Find"
 tags: [access-control, business-logic, writeup]
 thumb: access-control
+thumb_img: /assets/img/thumbs/cross.gif
 severity: Critical
 ---
 

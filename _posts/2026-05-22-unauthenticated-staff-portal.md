@@ -2,6 +2,7 @@
 title: "An Unauthenticated Staff Portal, Sitting in Plain Sight"
 tags: [recon, access-control, writeup]
 thumb: recon
+thumb_img: /assets/img/thumbs/staff.gif
 severity: High
 ---
 
