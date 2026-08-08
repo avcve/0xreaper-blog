@@ -2,6 +2,7 @@
 title: "Checkout Success IDOR: How an Order Number Was All You Needed"
 tags: [idor, access-control, writeup]
 thumb: idor
+thumb_img: /assets/img/thumbs/checkout.gif
 severity: High
 ---
 
