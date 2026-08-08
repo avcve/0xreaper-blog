@@ -23,13 +23,13 @@ That query answers one question: *does this token belong to a real, unused ticke
 
 ## The bypass
 
-I bought the cheapest ticket available — a free RSVP-only event — and scanned its token against the validation endpoint for a separate, paid event. It came back valid. The scanner had no way to know the ticket wasn't meant for that door.
+I bought the cheapest ticket available, a free RSVP-only event, and scanned its token against the validation endpoint for a separate, paid event. It came back valid. The scanner had no way to know the ticket wasn't meant for that door.
 
 In practice, that means a single free ticket, or any valid ticket from any event on the platform, would grant entry anywhere. On a platform whose entire business model is charging for entry, that's a direct path to bypassing payment altogether.
 
 ## Why this matters more than a technical bug
 
-A misconfigured header or an exposed endpoint is usually the result of a mistake. This wasn't a mistake in the traditional sense — the validation endpoint worked exactly as it was written. It just was never written to enforce a scope that the business obviously requires. That's the difference between a vulnerability scanner catching something and a person sitting down and asking "what should this system actually be allowed to do?"
+A misconfigured header or an exposed endpoint is usually the result of a mistake. This wasn't a mistake in the traditional sense: the validation endpoint worked exactly as it was written. It just was never written to enforce a scope that the business obviously requires. That's the difference between a vulnerability scanner catching something and a person sitting down and asking "what should this system actually be allowed to do?"
 
 This is also why manual, business-logic-driven testing still matters even with mature scanning tooling in the pipeline. Nothing about this flaw would trip an OWASP Top 10 signature. It only shows up when you model the system the way its owner would describe it, and then check whether the code agrees.
 
@@ -48,4 +48,4 @@ Scope the validation to the event being scanned, not just the token's existence.
 
 ## Takeaway
 
-When you're auditing anything with multiple tenants, events, or scopes sharing one validation path, don't just test whether a resource exists — test whether it's *scoped correctly to the context it's being used in*. That question is almost never covered by default in an ORM's generated queries, and it's rarely covered by a scanner either.
+When you're auditing anything with multiple tenants, events, or scopes sharing one validation path, don't just test whether a resource exists. Test whether it's *scoped correctly to the context it's being used in*. That question is almost never covered by default in an ORM's generated queries, and it's rarely covered by a scanner either.

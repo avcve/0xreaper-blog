@@ -26,7 +26,7 @@ git push -u origin main
 ```
 
 3. On GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / `(root)`**.
-4. Wait a minute or two, then visit `https://avcve.github.io/0xreaper-blog`. No local Jekyll install needed — GitHub builds it on every push.
+4. Wait a minute or two, then visit `https://avcve.github.io/0xreaper-blog`. No local Jekyll install needed. GitHub builds it on every push.
 
 If you ever rename the repo, update `baseurl` in `_config.yml` to match (`/new-repo-name`), or the CSS/nav links will 404.
 
@@ -51,7 +51,7 @@ Every writeup is a markdown file in `_posts/`, named `YYYY-MM-DD-title-slug.md`.
 title: "Your Post Title"
 tags: [tag-one, tag-two, writeup]
 thumb: idor        # one of: access-control | idor | payment | recon | default
-severity: High      # optional — omit if not a vuln writeup. Options: Critical | High | Medium
+severity: High      # optional, omit if not a vuln writeup. Options: Critical | High | Medium
 ---
 ```
 
@@ -60,9 +60,9 @@ severity: High      # optional — omit if not a vuln writeup. Options: Critical
 
 ## Before you publish anything from a real engagement
 
-- Never use a real client name, real domain, real endpoint path, or real screenshot without explicit permission — check your NDA every time, not just the first time.
+- Never use a real client name, real domain, real endpoint path, or real screenshot without explicit permission. Check your NDA every time, not just the first time.
 - Replace real IDs, tokens, amounts, and names with fictional ones that still demonstrate the bug class.
-- If a screenshot contains another person's real PII (name, ID, contact info), don't publish it — redact it or don't use it at all. Blurring in an image editor is not always reliable; when in doubt, recreate the relevant detail as text or a mocked-up graphic instead.
+- If a screenshot contains another person's real PII (name, ID, contact info), don't publish it. Redact it or don't use it at all. Blurring in an image editor is not always reliable; when in doubt, recreate the relevant detail as text or a mocked-up graphic instead.
 
 ## Structure
 
@@ -88,4 +88,4 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Then open `http://localhost:4000`. Not required for deployment — GitHub Pages builds it remotely regardless.
+Then open `http://localhost:4000`. Not required for deployment. GitHub Pages builds it remotely regardless.

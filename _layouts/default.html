@@ -3,25 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <title>0xReaper's Blog</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
+  <div class="mobile-topbar">
+    <button class="mobile-icon-btn" onclick="toggleSidebar()" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <span class="mobile-title">0xReaper</span>
+    <button class="mobile-icon-btn" onclick="toggleMobileSearch()" aria-label="Search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>
+    </button>
+  </div>
+  <div class="mobile-search-bar" id="mobileSearchBar">
+    <input type="text" placeholder="grep --exploit" disabled title="Static site. Wire up Lunr/Algolia for real search">
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
   {% include sidebar.html %}
   <div class="page-body">
     <main class="feed">
       <div class="topbar">
         <span class="topbar-crumb">{{ page.title | default: "Home" }}</span>
-        <input type="text" class="search" placeholder="grep --exploit" disabled title="Static site — wire up Lunr/Algolia for real search">
+        <input type="text" class="search" placeholder="grep --exploit" disabled title="Static site. Wire up Lunr/Algolia for real search">
       </div>
       {{ content }}
     </main>
     {% include rightbar.html %}
   </div>
   <footer style="width:100%">
-    &copy; {{ 'now' | date: "%Y" }} 0xReaper — built to break things, then explain how.
+    &copy; {{ 'now' | date: "%Y" }} 0xReaper. Built to break things, then explain how.
   </footer>
+
+  <script>
+    function toggleSidebar(){
+      document.querySelector('.sidebar').classList.toggle('sidebar-open');
+      document.getElementById('sidebarOverlay').classList.toggle('active');
+    }
+    function closeSidebar(){
+      document.querySelector('.sidebar').classList.remove('sidebar-open');
+      document.getElementById('sidebarOverlay').classList.remove('active');
+    }
+    function toggleMobileSearch(){
+      document.getElementById('mobileSearchBar').classList.toggle('active');
+    }
+    document.querySelectorAll('.sidebar-nav a').forEach(function(a){
+      a.addEventListener('click', closeSidebar);
+    });
+  </script>
 </body>
 </html>
