@@ -12,6 +12,12 @@ title: Home
       {% if post.tags %}<span>{{ post.tags | first }}</span>{% endif %}
     </div>
   </div>
+{% if post.thumb_img %}
+  <div class="post-thumb">
+    <img src="{{ post.thumb_img | relative_url }}" alt="{{ post.title }}" loading="lazy">
+  </div>
+{% else %}
   {% include thumb.html kind=post.thumb %}
+{% endif %}
 </article>
 {% endfor %}

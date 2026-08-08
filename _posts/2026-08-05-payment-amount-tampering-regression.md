@@ -2,6 +2,7 @@
 title: "Payment Amount Tampering: A Regression Worth Flagging Twice"
 tags: [payment, business-logic, writeup]
 thumb: payment
+thumb_img: /assets/img/thumbs/regression.gif
 severity: Critical
 ---
 
