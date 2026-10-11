@@ -1,5 +1,6 @@
 ---
 title: "I Think I Found a New Hobby: Geolocating a Photo From Scratch"
+date: 2026-10-11
 tags: [osint, recon, writeup]
 thumb: recon
 thumb_img: /assets/img/thumbs/stalker.gif
