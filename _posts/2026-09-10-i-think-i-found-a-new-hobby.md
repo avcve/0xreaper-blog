@@ -17,7 +17,7 @@ I double checked that against Google Images, cross-referencing visible landmarks
 
 Then I went to work on Google Maps properly. There was an offset between what Grok gave me and the actual pin, so I had to use the forward and backward arrows on Street View to walk the location back manually until it lined up with what was actually in the photo.
 
-![Street View lined up against the original photo]({{ '/assets/img/posts/street-view-walkthrough.png' | relative_url }})
+![Street View lined up against the original photo]({{ '/assets/img/posts/street-view-walkthrough.jpg' | relative_url }})
 *Walking the Street View arrows until the background matched.*
 
 It was genuinely fun. Reconstructing where someone was standing, from a single photo, using nothing but public tools. And it's not just a party trick. This is real tradecraft, the same core method groups like Bellingcat use to verify footage from conflict zones: landmark matching, shadow angles, signage, terrain, cross-referenced against satellite and Street View until one location is the only one that fits.
