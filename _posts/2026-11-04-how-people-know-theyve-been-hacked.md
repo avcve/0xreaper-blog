@@ -59,7 +59,7 @@ Some rules I stick to. Only use your own infrastructure. Keep the bait at dust l
 
 MCP is a standard way for an AI tool to talk to another app through a connector. In my setup, Manus does the scanning work and Notion is where everything lands.
 
-![MCP automated reporting tool]({{ '/assets/img/posts/mcp-reporting-tool.png' | relative_url }})
+![MCP automated reporting tool]({{ '/assets/img/posts/mcp-reporting-tool.jpg' | relative_url }})
 *Manus scans, MCP structures the results, Notion stores them.*
 
 Each run follows the same flow:
